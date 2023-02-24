@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&family=Vast+Shadow&display=swap');
+
+html {
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+}
+
+header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: lightblue;
+}
+
+#mainTitle {
+    font-size: 45px;
+    font-weight: normal;
+    font-family: 'Vast Shadow', cursive;
+}
+
+#container {
+    padding: 20px;
+}
+
+#addBookBtn {
+    background-color: pink;
+}
+
+#libraryContents {
+    display: flex;
+    padding: 15px;
+}
+
+.bookCard {
+    position: relative;
+    min-height: 160px;
+    min-width: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.bookTitle {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.bookAuthor {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed black;
+    margin-bottom: 10px;
+}
+
+.pages,
+.dateRead {
+    font-size: smaller;
+}
+
+.readStatus {
+    position: absolute;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+}
+
+.bookBtns {
+    position: absolute;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+}
+
+.bookBtns > button {
+    border: none;
+    background: none;
+}
+
+input[type='checkbox'].readStatus {
+    font-size: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1em;
+    height: 0.8em;
+    background: #ddd;
+    border-radius: 3em;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  input[type='checkbox'].readStatus:checked {
+    background: rgb(8, 138, 77);
+  }
+  
+  input[type='checkbox'].readStatus:after {
+    position: absolute;
+    content: '';
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    left: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  input[type='checkbox'].readStatus:checked:after {
+    left: calc(100% - 0.9em);
+  }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+#formModal {
+    position: absolute;
+    display: none;
+    top: 25%;
+    right: 50%;
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.active#formModal {
+    display: block;
+    background-color: white;
+}
+
+.formTop {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(98, 121, 129);
+}
