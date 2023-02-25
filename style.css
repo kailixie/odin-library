@@ -38,6 +38,7 @@ header {
 #libraryContents {
     display: flex;
     padding: 15px;
+    column-gap: 10px;
 }
 
 .bookCard {
@@ -84,46 +85,10 @@ header {
     background: none;
 }
 
-input[type='checkbox'].readStatus {
-    font-size: 30px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 1em;
-    height: 0.8em;
-    background: #ddd;
-    border-radius: 3em;
-    position: relative;
-    cursor: pointer;
-    outline: none;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  input[type='checkbox'].readStatus:checked {
-    background: rgb(8, 138, 77);
-  }
-  
-  input[type='checkbox'].readStatus:after {
+.readBtn {
     position: absolute;
-    content: '';
-    width: 0.8em;
-    height: 0.8em;
-    border-radius: 50%;
-    background: #fff;
-    -webkit-box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
-    -webkit-transform: scale(0.7);
-    transform: scale(0.7);
-    left: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  input[type='checkbox'].readStatus:checked:after {
-    left: calc(100% - 0.9em);
-  }
-
+    top: 5px;
+}
 
 .material-symbols-outlined {
   font-variation-settings:

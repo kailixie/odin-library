@@ -138,7 +138,6 @@ function addCardListeners() {
     deleteBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
             myLibrary.splice(btn.getAttribute('data-id'), 1);
-            // console.log(btn.getAttribute('data-id'))
             displayBooks();
         })
     })
@@ -146,6 +145,7 @@ function addCardListeners() {
     editBtns.forEach((btn) => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
+            console.log(btn.getAttribute('data-id'))
             editBook(btn.getAttribute('data-id'))
         })
     })
@@ -162,7 +162,7 @@ function editBook(id) {
     document.querySelector("#bookAuthor").value = myLibrary[selectedBook].author;
     document.querySelector("#bookPages").value = myLibrary[selectedBook].pages;
     document.querySelector("#bookDate").value = myLibrary[selectedBook].date;
-    document.querySelector("#bookStatus").checked = myLibrary[selectedBook].isRead;
+    document.querySelector("#bookStatus").value = myLibrary[selectedBook].isRead;
     myLibrary.splice(selectedBook, 1);
 }
 
