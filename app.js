@@ -118,6 +118,15 @@ function clearForm() {
     readInput.checked = false
 }
 
+class Button {
+    constructor(value) {
+        this.value = value;
+    }
+    click = () => {
+        alert(this.value);
+    }
+}
+
 function addCardListeners() {
     const deleteBtns = document.querySelectorAll('.deleteBook');
     const editBtns = document.querySelectorAll('.editBook');
